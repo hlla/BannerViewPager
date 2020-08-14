@@ -4,12 +4,7 @@ import android.util.SparseArray
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-
-import com.example.zhpan.circleviewpager.fragment.BaseFragment
-import com.example.zhpan.circleviewpager.fragment.HomeFragment
-import com.example.zhpan.circleviewpager.fragment.IndicatorFragment
-import com.example.zhpan.circleviewpager.fragment.OthersFragment
-import com.example.zhpan.circleviewpager.fragment.PageFragment
+import com.example.zhpan.circleviewpager.fragment.*
 
 /**
  * <pre>
@@ -58,6 +53,14 @@ class AdapterFragmentPager(fragmentActivity: FragmentActivity) : FragmentStateAd
                     fragment = fragments.get(PAGE_OTHERS)
                 }
             }
+            PAGE_EPOXY -> {
+                if (fragments.get(PAGE_EPOXY) == null) {
+                    fragment = EpoxyFragment.getInstance()
+                    fragments.put(PAGE_EPOXY, fragment)
+                } else {
+                    fragment = fragments.get(PAGE_EPOXY)
+                }
+            }
             else -> {
                 if (fragments.get(PAGE_HOME) == null) {
                     fragment = HomeFragment.getInstance();
@@ -71,7 +74,7 @@ class AdapterFragmentPager(fragmentActivity: FragmentActivity) : FragmentStateAd
     }
 
     override fun getItemCount(): Int {
-        return 4
+        return 5
     }
 
     companion object {
@@ -83,6 +86,8 @@ class AdapterFragmentPager(fragmentActivity: FragmentActivity) : FragmentStateAd
         const val PAGE_INDICATOR = 2
 
         const val PAGE_OTHERS = 3
+
+        const val PAGE_EPOXY = 4
 
     }
 

@@ -62,7 +62,7 @@ abstract class BaseFragment : RxFragment() {
 
     @ColorInt
     protected fun getColor(@ColorRes colorRes: Int): Int {
-        return ContextCompat.getColor(context!!, colorRes)
+        return ContextCompat.getColor(requireContext(), colorRes)
     }
 
     /**

@@ -108,6 +108,19 @@
                     android:text="@string/tab4"
                     android:textColor="@drawable/text_color_selector" />
 
+                <RadioButton
+                    android:id="@+id/rb_epoxy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/tab4_selector"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="epoxy"
+                    android:textColor="@drawable/text_color_selector" />
+
 
             </RadioGroup>
 

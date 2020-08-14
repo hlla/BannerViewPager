@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
@@ -65,4 +66,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui:2.2.2"
     implementation 'com.tencent.bugly:crashreport:3.2.1'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.airbnb.android:epoxy:4.0.0-beta6'
+    kapt 'com.airbnb.android:epoxy-processor:4.0.0-beta6'
+
 }
